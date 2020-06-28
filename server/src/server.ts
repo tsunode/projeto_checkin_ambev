@@ -1,4 +1,3 @@
-// importandoo biblioteca express
 import express from "express";
 import cors from "cors";
 import routes from "./routes";
@@ -19,7 +18,7 @@ app.get("/", function (req, res) {
 
 // Definindo porta 3333 para rodar a API
 app.listen(port, function () {
-  console.log('Servidor API "Cervejeiros" [v.1 - 2020 | 28/06/2020] => ATIVO [PORTA: 3333]');
+  console.log('Servidor API - Cervejeiros [v.1 - 2020 | 28/06/2020] => ATIVO [PORTA: 3333]');
 });
 
 
