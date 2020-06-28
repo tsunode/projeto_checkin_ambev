@@ -14,7 +14,7 @@
 - React-Native >= 6.2
 - npm >= 6.0.0
 
-## Como utilizar:
+## Como utilizar
 
 ### Execute o comando para instalações de dependências:
 
