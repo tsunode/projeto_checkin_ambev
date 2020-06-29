@@ -9,7 +9,7 @@ import config from './routes.config';
 // routes
 import Home from '../pages/home';
 import Scanner from '../pages/scanner';
-import Profile from '../pages/home';
+import Profile from '../pages/profile';
 
 
 const AppStack = createStackNavigator();
