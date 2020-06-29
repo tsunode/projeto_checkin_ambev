@@ -10,7 +10,6 @@ const qrCodeCreate: React.FC<Props> = (props) => {
     return (
         <QRCode
             value={props.value}
-
         />
     );
 }

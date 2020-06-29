@@ -87,6 +87,8 @@ target 'mobile' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
   target 'mobileTests' do
     inherit! :complete
     # Pods for testing
