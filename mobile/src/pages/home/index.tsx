@@ -56,6 +56,10 @@ const Home: React.FC = () => {
                         {
                             name: 'Stella Artois',
                             image: 'https://logodownload.org/wp-content/uploads/2014/08/Stella-Artois-Logo.png'
+                        },
+                        {
+                            name: 'Budweiser',
+                            image: 'https://logodownload.org/wp-content/uploads/2014/04/budweiser-logo.png'
                         }
                     ]
                 },
@@ -73,7 +77,11 @@ const Home: React.FC = () => {
                         {
                             name: 'Stella Artois',
                             image: 'https://logodownload.org/wp-content/uploads/2014/08/Stella-Artois-Logo.png'
-                        }
+                        },
+                        {
+                            name: 'Skol',
+                            image: 'https://logodownload.org/wp-content/uploads/2014/05/Skol-logo.png'
+                        },
                     ]
                 },
                 {
@@ -87,6 +95,10 @@ const Home: React.FC = () => {
                             name: 'Skol',
                             image: 'https://logodownload.org/wp-content/uploads/2014/05/Skol-logo.png'
                         },
+                        {
+                            name: 'Budweiser',
+                            image: 'https://logodownload.org/wp-content/uploads/2014/04/budweiser-logo.png'
+                        }
                     ]
                 },
                 {

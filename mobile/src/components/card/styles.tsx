@@ -37,7 +37,9 @@ const Styles = StyleSheet.create({
 
     barName: {
         fontSize: 25,
-        color: colors.primary
+        color: colors.primary,
+        fontFamily: 'Rubik Bold',
+        // fontWeight:'bold',
     },
 
     barStatus: {
@@ -64,16 +66,53 @@ const Styles = StyleSheet.create({
         marginLeft: 5,
         flex: 3,
     },
-    viewBeer: {
+    footer: {
+        flex: 1,
         flexDirection: 'row',
-        backgroundColor: colors.textPrimary,
-        justifyContent: 'center',
+        // justifyContent: 'center',
         marginTop: 20
     },
 
+    viewBeer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'stretch',
+        flexWrap: 'wrap',
+    },
+
+    viewInformation: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+    },
+
+    viewInformationIcon: {
+        alignItems: 'center',
+        marginHorizontal: 5
+    },
+
+    textInformation: {
+        color: colors.primary,
+        textAlign: 'center'
+    },
+
+    commentQtd: {
+        position: 'absolute',
+        width: 50,
+        height: 50,
+        fontFamily: 'Rubik Regular',
+        color: colors.textPrimary,
+        textAlignVertical: 'center',
+        textAlign: 'center',
+    },
+
     beerImage: {
-        width: 60,
-        height: 60,
+        width: 70,
+        height: 70,
         marginHorizontal: 10
     }
 });
