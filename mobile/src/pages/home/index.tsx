@@ -27,22 +27,22 @@ const Home: React.FC = () => {
 
     const [bars, setBars] = useState<Bars[]>();
 
-    useEffect(() => {
-        api.get('teste').then(response => {
-            console.log(response.data);
-        });
-    }, [])
+    // useEffect(() => {
+    //     api.get('teste').then(response => {
+    //         console.log(response.data);
+    //     });
+    // }, [])
 
     useEffect(() => {
-        // Teste toi recebidos
-        async function carregaDadosTeste() {
+        // Teste recebidos
+        function carregaDadosTeste() {
 
             const bars = [
                 {
                     id: 1,
                     name: 'Coisa e Tal',
                     status: 'Aberto até 4:00',
-                    assessments: 5,
+                    assessments: 2,
                     image: 'http://vejasp.abril.com.br/wp-content/uploads/2019/11/img_3240-hdr.jpg.jpg?quality=70&strip=info&resize=680,453',
                     beers: [
                         {
@@ -63,7 +63,7 @@ const Home: React.FC = () => {
                     id: 2,
                     name: 'Bar Tar Coisa',
                     status: 'Abre as 21:00',
-                    assessments: 5,
+                    assessments: 4,
                     image: 'https://vejasp.abril.com.br/wp-content/uploads/2018/12/caulc3ad-lounge-bar-crc3a9dito-rafael-renzo-41.jpg',
                     beers: [
                         {
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
                     id: 4,
                     name: 'Coisa e Tal',
                     status: 'Aberto até 4:00',
-                    assessments: 5,
+                    assessments: 3,
                     image: 'https://i.pinimg.com/originals/2c/09/a1/2c09a161db48c77bf2f3facf9c8362a2.jpg',
                     beers: [
                         {
@@ -105,8 +105,6 @@ const Home: React.FC = () => {
 
             ];
             setBars(bars);
-
-
         }
 
         carregaDadosTeste()
@@ -118,12 +116,14 @@ const Home: React.FC = () => {
         <View style={styles.container}>
 
             <FlatList
+            style={{backgroundColor: '#fff'}}
                 data={bars}
                 keyExtractor={item => String(item.id)}
-                renderItem={({ item }) => {
+                renderItem={({ item, index }) => {
                     return (
                         <Card
                             {...item}
+                            index={index}
                         />
                     )
                 }}

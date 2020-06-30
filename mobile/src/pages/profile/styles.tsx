@@ -11,7 +11,6 @@ const Styles = StyleSheet.create({
     },
 
     profile: {
-        // flex: 2,
         alignItems: 'center'
     },
 

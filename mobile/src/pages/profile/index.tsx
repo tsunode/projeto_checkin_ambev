@@ -13,7 +13,7 @@ const Profile: React.FC = () => {
                 <Text style={styles.profileDescription}> Cervejeiro Profissional</Text>
           </View>
           <View style={styles.section}>
-
+            {/* Historico de check-in aqui  */}
           </View>
       </View>
 

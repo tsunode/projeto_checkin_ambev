@@ -6,50 +6,74 @@ import colors from '../../styles/colors';
 
 const Styles = StyleSheet.create({
 
-    container:{
-        paddingVertical: 20,
-        backgroundColor: colors.primary,
+    container: {
+        paddingVertical: 10,
         flexDirection: 'column',
-        marginVertical: 10
     },
 
-    main:{
+    main: {
         flexDirection: 'row',
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
     },
 
-    barImage:{
+    logoTrophy: {
+        maxHeight: 90
+    },
+
+    barImage: {
         width: 100,
         height: 100,
         borderRadius: 50
     },
-
-    barName:{
-        fontSize: 30,
-        color: colors.textSecondary
+    viewTrophy: {
+        alignItems: 'center',
     },
 
-    barStatus:{
+    textTrophy: {
+        fontSize: 8,
+        color: '#6D6D6D',
+        fontStyle: 'italic'
+    },
+
+    barName: {
+        fontSize: 25,
+        color: colors.primary
+    },
+
+    barStatus: {
         fontSize: 16,
-        color: colors.textPrimary
+        color: '#898989'
     },
 
-    viewText:{
+    viewArrow: {
+        flex: 0.6,
+        alignItems: 'flex-end',
+    },
+
+    viewStar: {
+        flexDirection: 'row',
+        marginTop: 5
+    },
+
+    star: {
+        margin: 2
+    },
+
+    viewText: {
         flexDirection: "column",
-        // alignItems: 'center',
-        marginLeft: 15
+        marginLeft: 5,
+        flex: 3,
     },
-
-    viewBeer:{
+    viewBeer: {
         flexDirection: 'row',
         backgroundColor: colors.textPrimary,
         justifyContent: 'center',
         marginTop: 20
     },
 
-    beerImage:{
+    beerImage: {
         width: 60,
-        height: 60,   
+        height: 60,
         marginHorizontal: 10
     }
 });
