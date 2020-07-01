@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, FlatList } from 'react-native';
+import { View, FlatList, StatusBar } from 'react-native';
 
 // acessar API
 import api from '../../services/api';
@@ -9,6 +9,7 @@ import styles from './styles';
 
 // componentes
 import Card from '../../components/card';
+import Header from '../../components/header';
 
 interface Bars {
     id: number;
@@ -125,24 +126,28 @@ const Home: React.FC = () => {
 
 
     return (
-        <View style={styles.container}>
+        <>
 
-            <FlatList
-            style={{backgroundColor: '#fff'}}
-                data={bars}
-                keyExtractor={item => String(item.id)}
-                renderItem={({ item, index }) => {
-                    return (
-                        <Card
-                            {...item}
-                            index={index}
-                        />
-                    )
-                }}
-            />
+            <Header />
+            <View style={styles.container}>
+
+                <FlatList
+                    style={{ backgroundColor: '#fff' }}
+                    data={bars}
+                    keyExtractor={item => String(item.id)}
+                    renderItem={({ item, index }) => {
+                        return (
+                            <Card
+                                {...item}
+                                index={index}
+                            />
+                        )
+                    }}
+                />
 
 
-        </View>
+            </View>
+        </>
     )
 }
 

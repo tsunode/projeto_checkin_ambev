@@ -31,7 +31,6 @@ const screenOptions = (props: Props) => {
         iconName = 'user-alt';
     }
 
-    console.log(iconName);
     return <Icon name={String(iconName)} style={style} size={30} color={iconColor} />;
 }
 

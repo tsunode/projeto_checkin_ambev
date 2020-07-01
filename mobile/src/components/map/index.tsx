@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, PermissionsAndroid } from 'react-native';
 // import MapView, { Marker } from 'react-native-maps';
 
-// import Geolocation from 'react-native-geolocation-service';
+import Geolocation from 'react-native-geolocation-service';
 
 // import { Container } from './styles';
 
@@ -15,14 +15,14 @@ const map: React.FC = () => {
 
         verifyLocationPermission();
 
-        // if (hasLocationPermission) {
-        //     Geolocation.getCurrentPosition(position => {
+        if (hasLocationPermission) {
+            Geolocation.getCurrentPosition(position => {
 
-        //         const { latitude, longitude } = position.coords;
+                const { latitude, longitude } = position.coords;
 
-        //         setInitialPosition([latitude, longitude])
-        //     });
-        // }
+                setInitialPosition([latitude, longitude])
+            });
+        }
     }, [hasLocationPermission])
 
     async function verifyLocationPermission() {

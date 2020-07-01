@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Image, Text, TouchableOpacity, LayoutAnimation, UIManager, Platform, Animated } from 'react-native';
+import { View, Image, Text, TouchableOpacity, LayoutAnimation, UIManager, Platform, Animated, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 // logos
@@ -11,6 +11,7 @@ import Address from '../../assets/img/iconesPersonalizados/address.svg';
 
 // estilos
 import styles from './styles';
+import { colors } from '../../styles';
 
 
 interface Props {
@@ -50,6 +51,10 @@ const Card: React.FC<Props> = (props) => {
         setAccordion(!accordion);
     }
 
+    function handleWhatsapp() {
+        Linking.openURL(`whatsapp://send?phone=55${35984127102}&text=Tenho interesse`);
+    }
+
 
     // estrelas
     let stars = [];
@@ -62,8 +67,9 @@ const Card: React.FC<Props> = (props) => {
     }
 
     return (
-        <TouchableOpacity onPress={handleAccordion} activeOpacity={0.8}>
-            <View style={[styles.container, { backgroundColor: props.index % 2 == 0 ? "#ededed" : "#fff" }]}>
+
+        <View style={[styles.container, { backgroundColor: props.index % 2 == 0 ? "#ededed" : "#fff" }]}>
+            <TouchableOpacity onPress={handleAccordion} activeOpacity={0.8}>
                 <View style={styles.main}>
                     <View>
                         <Image style={styles.barImage} source={{ uri: props.image }} />
@@ -92,43 +98,47 @@ const Card: React.FC<Props> = (props) => {
                                 <Icon name="chevron-down" size={25} color="#BCBCBC" />
                         }
 
-
                     </View>
                 </View>
-                {
-                    accordion &&
-                    <Animated.View
-                        style={[
-                            styles.footer,
-                            {
-                                transform: [{
-                                    scale: accordionScale
-                                }]
-                            }
-                        ]}
-                    >
-                        <View style={styles.viewBeer}>
-                            {
-                                props.beers.map(beer => (
-                                    <Image key={beer.name} resizeMode="contain" style={styles.beerImage} source={{ uri: beer.image }} />
-                                ))
-                            }
-                        </View>
-                        <View style={styles.viewInformation}>
-                            <View style={styles.viewInformationIcon}>
-                                <Address width={50} height={50} />
-                                <Text style={styles.textInformation}>Endereço</Text>
-                            </View>
-                            <View style={styles.viewInformationIcon}>
-                                <Comment width={50} height={50} />
-                                <Text style={styles.commentQtd}>38</Text>
-                                <Text style={styles.textInformation}>Comentários</Text>
-                            </View>
-                        </View>
-                    </Animated.View>
-                }
-            </View>
-        </TouchableOpacity>
+            </TouchableOpacity>
+            {
+                accordion &&
+                <Animated.View
+                    style={[
+                        styles.footer,
+                        {
+                            transform: [{
+                                scale: accordionScale
+                            }]
+                        }
+                    ]}
+                >
+                    <View style={styles.viewBeer}>
+                        {
+                            props.beers.map(beer => (
+                                <Image key={beer.name} resizeMode="contain" style={styles.beerImage} source={{ uri: beer.image }} />
+                            ))
+                        }
+                    </View>
+                    <View style={styles.viewInformation}>
+                        <TouchableOpacity style={styles.viewInformationIcon} onPress={handleWhatsapp}>
+                            <Icon name="phone" size={30} color={colors.primary} style={{ height: 40, textAlignVertical: 'center' }} />
+                            <Text style={styles.textInformation}>Contato</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.viewInformationIcon}>
+                            <Address width={40} height={40} />
+                            <Text style={styles.textInformation}>Endereço</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.viewInformationIcon}>
+                            <Comment width={40} height={40} />
+                            <Text style={styles.commentQtd}>38</Text>
+                            <Text style={styles.textInformation}>Comentários</Text>
+                        </TouchableOpacity>
+                    </View>
+                </Animated.View>
+            }
+        </View >
+
     );
 }
 

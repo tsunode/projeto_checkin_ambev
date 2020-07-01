@@ -88,22 +88,26 @@ const Styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
+        borderLeftWidth: 3,
+        borderLeftColor: colors.primary,
     },
 
     viewInformationIcon: {
+
         alignItems: 'center',
         marginHorizontal: 5
     },
 
     textInformation: {
         color: colors.primary,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: 10
     },
 
     commentQtd: {
         position: 'absolute',
-        width: 50,
-        height: 50,
+        width: 40,
+        height: 40,
         fontFamily: 'Rubik Regular',
         color: colors.textPrimary,
         textAlignVertical: 'center',
