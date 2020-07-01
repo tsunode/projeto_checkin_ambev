@@ -15,14 +15,16 @@ import { colors } from '../../styles';
 
 
 interface Props {
+    id: number;
     name: string;
-    status: string;
+    type: string;
     assessments: number;
+    is_open: number;
     image: string;
-    beers: {
+    brands: {
         name: string,
         image: string
-    }[];
+    }[]
     index: number
 }
 
@@ -79,7 +81,7 @@ const Card: React.FC<Props> = (props) => {
                             {props.name}
                         </Text>
                         <Text style={styles.barStatus}>
-                            {props.status}
+                            {props.is_open}
                         </Text>
                         <View style={styles.viewStar}>
                             {stars}
@@ -115,8 +117,8 @@ const Card: React.FC<Props> = (props) => {
                 >
                     <View style={styles.viewBeer}>
                         {
-                            props.beers.map(beer => (
-                                <Image key={beer.name} resizeMode="contain" style={styles.beerImage} source={{ uri: beer.image }} />
+                            props.brands.map(brand => (
+                                <Image key={brand.name} resizeMode="contain" style={styles.beerImage} source={{ uri: brand.image }} />
                             ))
                         }
                     </View>
