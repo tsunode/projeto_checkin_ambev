@@ -8,15 +8,14 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 import styles from './styles';
 
 interface Props {
-    setScore: Function,
+    setScore(code: string): void
 }
 
 const qrCodeScanner: React.FC<Props> = (props) => {
 
     async function onSuccess(e: any) {
-        console.log(e.data);
 
-        props.setScore();
+        props.setScore(e.data);
 
     }
 
@@ -26,7 +25,8 @@ const qrCodeScanner: React.FC<Props> = (props) => {
             showMarker={true}
             containerStyle={styles.container}
             cameraStyle={styles.camera}
-            // reactivate={true}
+            reactivate={true}
+            reactivateTimeout={15000}
         />
     );
 }

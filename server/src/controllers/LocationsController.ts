@@ -80,7 +80,7 @@ class LocationController {
 
     const [ { datetime } ]:any = await knex("users_checkin").select('users_checkin.datetime').where("id_user", "=", id_user).orderBy('id','desc').limit(1);
 
-    // retorna quantas horas foi feito o último checkin
+    // retorna quantas horas foi feito o último checkin: 1 hora = 3600000 milessegundos
     const tempoUltimoCheckin = (Date.now() - datetime) / 3600000;
 
     if(tempoUltimoCheckin >= 12){
@@ -108,7 +108,6 @@ class LocationController {
     }else{
         return response.status(403).json({
             message: "Checkin já realizado em menos de 12 horas",
-            tempoUltimoCheckin
         });
     }
 
