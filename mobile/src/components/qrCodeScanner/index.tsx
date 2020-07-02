@@ -16,10 +16,8 @@ const qrCodeScanner: React.FC<Props> = (props) => {
     async function onSuccess(e: any) {
         console.log(e.data);
 
-         props.setScore();
-        // Linking.openURL(e.data).catch(err =>
-        //     console.error('An error occured', err)
-        // );
+        props.setScore();
+
     }
 
     return (

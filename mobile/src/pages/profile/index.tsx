@@ -14,11 +14,13 @@ import Comment from '../../assets/img/iconesPersonalizados/comment.svg';
 import StarActive from '../../assets/img/iconesPersonalizados/star_active.svg';
 import StarInative from '../../assets/img/iconesPersonalizados/star_inative.svg';
 import Tampinha from '../../assets/img/iconesPersonalizados/tampinha.svg';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const Profile: React.FC = () => {
 
   const starsQtd = 4;
+  const navigation = useNavigation();
 
   let stars = [];
   for (let i = 1; i <= 5; i++) {
@@ -28,6 +30,10 @@ const Profile: React.FC = () => {
       stars[i] = (<StarInative key={i} width={35} height={35} />);
   }
 
+  function handleGenerateCode() {
+    navigation.navigate('GenerateCode');
+  }
+
   return (
     <>
       <Header />
@@ -35,16 +41,16 @@ const Profile: React.FC = () => {
         <View style={styles.profile}>
           <Image style={styles.profileImage} source={require('../../assets/img/tests/perfil.jpg')} />
           <View>
-            <Text style={styles.profileName}> Gabriel Tsunoda</Text>
-            <Text style={styles.profileDescription}> Cervejeiro Profissional</Text>
+            <Text style={styles.profileName}>Gabriel Tsunoda</Text>
+            <Text style={styles.profileDescription}>Cervejeiro Profissional</Text>
           </View>
-          <View style={styles.viewNivel}>
+          <TouchableOpacity style={styles.viewNivel} onPress={handleGenerateCode}>
             <LogoNivel width={90} height={90} />
             <View style={styles.viewNivelText}>
               <Text style={styles.textNivel}>Nível</Text>
               <Text style={styles.textNivelUser}>42</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.section}>
           <View >
@@ -75,12 +81,12 @@ const Profile: React.FC = () => {
           </View>
           <View style={styles.div}>
             <Text style={styles.title}>Recompensas</Text>
-            <View style={{alignItems: 'center'}}>
+            <View style={{ alignItems: 'center' }}>
               <View style={styles.scoreView}>
                 <Text style={styles.scoreText}> 15.264</Text>
                 <Tampinha width={60} height={60} />
               </View>
-              <ScrollView horizontal contentContainerStyle={{margin: 5}} showsHorizontalScrollIndicator={false} >
+              <ScrollView horizontal contentContainerStyle={{ margin: 5 }} showsHorizontalScrollIndicator={false} >
                 <View style={styles.recompensaView}>
                   <Image style={styles.recompensaImage} source={require('../../assets/img/trofeus/premio1.png')}></Image>
                   <Text style={styles.recompensaText}>Placas</Text>

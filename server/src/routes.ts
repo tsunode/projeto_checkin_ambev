@@ -8,4 +8,8 @@ const routes = express.Router();
 
 routes.get("/locations", locationsController.index);
 
+routes.get("/code", locationsController.generateCode);
+
+routes.post("/checkin", locationsController.checkin);
+
 export default routes;

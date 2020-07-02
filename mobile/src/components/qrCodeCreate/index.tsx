@@ -8,7 +8,7 @@ interface Props {
 
 const qrCodeCreate: React.FC<Props> = (props) => {
     return (
-        <QRCode
+        <QRCode size={200}
             value={props.value}
         />
     );

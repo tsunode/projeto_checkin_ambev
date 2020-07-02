@@ -59,7 +59,7 @@ const Card: React.FC<Props> = (props) => {
 
 
     // estrelas
-    let stars = [];
+    const stars = [];
 
     for (let i = 1; i <= 5; i++) {
         if (i <= props.assessments)
@@ -67,6 +67,18 @@ const Card: React.FC<Props> = (props) => {
         else
             stars[i] = (<StarInative key={i} width={25} height={25} style={styles.star} />);
     }
+
+    //troféu
+    let trophy;
+
+    if (props.index === 0)
+        trophy = (
+            <View style={styles.viewTrophy}>
+                <Trofeu width={60} height={90} style={styles.logoTrophy} />
+                <Text style={styles.textTrophy}>Destaque da Semana</Text>
+            </View>
+        );
+    else trophy = (<></>);
 
     return (
 
@@ -81,16 +93,13 @@ const Card: React.FC<Props> = (props) => {
                             {props.name}
                         </Text>
                         <Text style={styles.barStatus}>
-                            {props.is_open}
+                            {props.is_open ? "Já estamos aberto" : "Abre às "}
                         </Text>
                         <View style={styles.viewStar}>
                             {stars}
                         </View>
                     </View>
-                    <View style={styles.viewTrophy}>
-                        <Trofeu width={60} height={90} style={styles.logoTrophy} />
-                        <Text style={styles.textTrophy}>Líder em comentários</Text>
-                    </View>
+                    {trophy}
                     <View style={styles.viewArrow}>
 
                         {

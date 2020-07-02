@@ -47,6 +47,72 @@ class LocationController {
 
     return response.json(seralizedLocations);
   }
+
+  generateCode(request: Request, response: Response) {
+
+    // recebe id do location que está logado
+    const idLocation = '5L';
+
+    // para não termos código repetido
+    const timestamp = Date.now();
+
+    // quantidade de pontos sempre em 8 caracteres
+    const points = 'P500';
+
+    // concatenando código
+
+    const code = idLocation + timestamp + points;
+
+    // exemplo código: 5L1593647177P500
+
+    /*  
+    os primeiros números até a letra L indetifica o id do lugar (então podemos ter um id com N digitos e não teremos problemas), 
+    o timestamp é gerado apenas para não ter repetição de código,
+    a partir da letra P identifica a quantidade de pontos, que no nosso exemplo é 500
+    */
+
+    return response.json(code);
+  }
+
+  async checkin(request: Request, response: Response) {
+
+    const { id_user , code } = request.body;
+
+    const [ { datetime } ]:any = await knex("users_checkin").select('users_checkin.datetime').where("id_user", "=", id_user).orderBy('id','desc').limit(1);
+
+    // retorna quantas horas foi feito o último checkin
+    const tempoUltimoCheckin = (Date.now() - datetime) / 3600000;
+
+    if(tempoUltimoCheckin >= 12){
+
+        // retorno até a letra 'L'
+        const id_location = code.substring(0, code.indexOf('L'));
+    
+        // retorno o que tem depois da letra 'P'
+        const points = code.substring(code.indexOf('P') + 1);
+    
+        const checkin = {
+            id_user,
+            id_location,
+            points,
+            datetime: new Date()
+        }
+
+        const ultimoId = await knex("users_checkin").insert(checkin);
+
+        return response.json({
+            validado: true,
+            points
+        });
+
+    }else{
+        return response.status(403).json({
+            message: "Checkin já realizado em menos de 12 horas",
+            tempoUltimoCheckin
+        });
+    }
+
+  }
 }
 
 export default LocationController;
