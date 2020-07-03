@@ -1,9 +1,12 @@
-import React from 'react';
-import { View, Modal, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, Modal, Text, Animated } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import styles from './styles';
 
 import Ambev from '../../assets/img/iconesPersonalizados/logo_ambev.svg';
+import Tampinha from '../../assets/img/iconesPersonalizados/tampinha.svg'
+import { colors } from '../../styles';
 
 
 interface Props {
@@ -14,21 +17,67 @@ interface Props {
 
 const ModalCheckin: React.FC<Props> = (props) => {
 
+    const [opacity, setOpacity] = useState(new Animated.Value(0));
+    const [scale, setScale] = useState(new Animated.Value(0));
+
+    function handleShow() {
+
+        Animated.timing(
+            opacity,
+            {
+                toValue: 1,
+                duration: 2000,
+                useNativeDriver: true,
+            }
+        ).start();
+
+        Animated.spring(
+            scale,
+            {
+                toValue: 1,
+                friction: 2,
+                useNativeDriver: true,
+            }
+        ).start();
+    }
+
     return (
         <Modal
             animationType="slide"
             transparent={true}
             visible={props.visible}
+            onShow={handleShow}
         >
             <View style={styles.centeredView}>
                 <View style={styles.modalView}>
-                    <Text style={styles.modalText}>Check-In</Text>
-                    <Ambev width={50} height={50} />
-                    <View style={styles.footerModal} />
-                    <View>
-                        <Text>+ {props.points}</Text>
+                    <View style={styles.header}>
+                        <Icon name="check-circle" size={70} color={colors.primary} />
+                        <Text style={styles.modalText}>Check-In</Text>
+                        <Animated.View
+                            style={{
+                                opacity: opacity
+                            }}
+                        >
+                            <Ambev width={80} height={20} />
+                        </Animated.View>
                     </View>
-
+                    <Animated.View
+                        style={[
+                            styles.footer,
+                            {
+                                transform: [{ scale: scale }]
+                            }
+                        ]}
+                    >
+                        <Text style={styles.points}>+500</Text>
+                        {/* <Text style={styles.points}>+ {props.points}</Text> */}
+                        <Tampinha width={60} height={60} />
+                    </Animated.View>
+                    <View style={styles.message}>
+                        <Text style={{ color: '#fff' }}>
+                            Beba com moderação
+                        </Text>
+                    </View>
                 </View>
             </View>
         </Modal>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, FlatList, StatusBar } from 'react-native';
+import { View, FlatList } from 'react-native';
 
 // acessar API
 import api from '../../services/api';
@@ -16,7 +16,7 @@ interface Locations {
     name: string;
     type: string;
     assessments: number;
-    is_open: number;
+    is_open: boolean;
     image: string;
     brands: {
         name: string,
@@ -36,10 +36,8 @@ const Home: React.FC = () => {
 
     return (
         <>
-
             <Header />
             <View style={styles.container}>
-
                 <FlatList
                     style={{ backgroundColor: '#fff' }}
                     data={locations}
@@ -53,8 +51,6 @@ const Home: React.FC = () => {
                         )
                     }}
                 />
-
-
             </View>
         </>
     )

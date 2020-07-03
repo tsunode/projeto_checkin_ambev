@@ -20,7 +20,7 @@ const Scanner: React.FC = () => {
     const [modalVisible, setModalVisible] = useState(false);
 
     async function handleScanner(code: String) {
-
+    
         await api.post('checkin', { id_user: 1, code }).then(response => {
             if (response.data.validado) {
 
@@ -42,12 +42,14 @@ const Scanner: React.FC = () => {
             }
         }).catch((error) => {
             if (error.response.status == 403) {
+
                 setModalVisible(true);
 
-                setTimeout(() => setModalVisible(false), 5000);
                 console.log(error.response.data.message);
             }
         });
+
+        setTimeout(() => setModalVisible(false), 5000);
     }
 
     return (
@@ -71,25 +73,26 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'flex-end',
-        alignItems: 'flex-end'
+        alignItems: 'center'
     },
 
     scoreView: {
         flexDirection: 'row',
+        alignItems: 'center',
         backgroundColor: colors.primary,
-        borderWidth: 5,
-        borderColor: colors.textPrimary,
         borderRadius: 50,
-        padding: 10,
+        paddingHorizontal: 15,
+        // paddingVertical: 5,
         maxWidth: 190,
         marginBottom: 20,
         marginRight: 20
     },
 
     scoreText: {
-        fontSize: 30,
+        fontSize: 40,
         color: colors.textSecondary,
-        marginHorizontal: 5
+        marginHorizontal: 10,
+        fontFamily: 'SUBSCRIBERRegular',
         // fontFamily: 'Rubik Bold'
     },
 })

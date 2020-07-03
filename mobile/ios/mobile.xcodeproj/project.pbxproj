@@ -42,6 +42,17 @@
 		13215348800746FD8A13D62B /* Rubik Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C85C0FEAAEF43EBB913EEFD /* Rubik Medium Italic.ttf */; };
 		8ED67DACD7044D5C9A0DDE2D /* Rubik Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D64BAC72FA9D48A7BCBB684D /* Rubik Medium.ttf */; };
 		BC87CB08B05E47FBACC78858 /* Rubik Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81320D4D28674FF39CB38868 /* Rubik Regular.ttf */; };
+		34CA0587F06B4AC383C1E0CE /* Rubik Black Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4518EDAAE5054AFD99412040 /* Rubik Black Italic.ttf */; };
+		8848BFEC01B047B6A2DEB24B /* Rubik Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7AA83C556834AB58571338D /* Rubik Black.ttf */; };
+		E8D204B2BA5941CCA90C097C /* Rubik Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AB8BCD2D4554401B5815888 /* Rubik Bold Italic.ttf */; };
+		71F4379379934FB380114858 /* Rubik Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72BDD28ABA4146B4828E2555 /* Rubik Bold.ttf */; };
+		F9F98FE8831249F4BBBDC8E3 /* Rubik Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563E70FEE33242A49C602EA3 /* Rubik Italic.ttf */; };
+		A7935FE034CE40709B31509F /* Rubik Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C1574346DA4B5EB1187F13 /* Rubik Light Italic.ttf */; };
+		DF3147AA269B4E8F9A3CC1D4 /* Rubik Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BA59143B58347459447C3C8 /* Rubik Light.ttf */; };
+		1A13C2B9CEA74CF5AB63304C /* Rubik Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 796A86A5F133415EB675D5F8 /* Rubik Medium Italic.ttf */; };
+		4BDA9E305F774C0AAF254CC6 /* Rubik Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38193A1187E34576B86E9738 /* Rubik Medium.ttf */; };
+		7CE63439AADB4ADAA0AA646D /* Rubik Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025982A60F1749DBAAC09946 /* Rubik Regular.ttf */; };
+		06A99915B6EE48DDA261C970 /* SUBSCRIBERRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA1B67433AB840839DC615A8 /* SUBSCRIBERRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +114,17 @@
 		1C85C0FEAAEF43EBB913EEFD /* Rubik Medium Italic.ttf */ = {isa = PBXFileReference; name = "Rubik Medium Italic.ttf"; path = "../assets/fonts/Rubik Medium Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		D64BAC72FA9D48A7BCBB684D /* Rubik Medium.ttf */ = {isa = PBXFileReference; name = "Rubik Medium.ttf"; path = "../assets/fonts/Rubik Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		81320D4D28674FF39CB38868 /* Rubik Regular.ttf */ = {isa = PBXFileReference; name = "Rubik Regular.ttf"; path = "../assets/fonts/Rubik Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4518EDAAE5054AFD99412040 /* Rubik Black Italic.ttf */ = {isa = PBXFileReference; name = "Rubik Black Italic.ttf"; path = "../src/assets/fonts/Rubik Black Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7AA83C556834AB58571338D /* Rubik Black.ttf */ = {isa = PBXFileReference; name = "Rubik Black.ttf"; path = "../src/assets/fonts/Rubik Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7AB8BCD2D4554401B5815888 /* Rubik Bold Italic.ttf */ = {isa = PBXFileReference; name = "Rubik Bold Italic.ttf"; path = "../src/assets/fonts/Rubik Bold Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		72BDD28ABA4146B4828E2555 /* Rubik Bold.ttf */ = {isa = PBXFileReference; name = "Rubik Bold.ttf"; path = "../src/assets/fonts/Rubik Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		563E70FEE33242A49C602EA3 /* Rubik Italic.ttf */ = {isa = PBXFileReference; name = "Rubik Italic.ttf"; path = "../src/assets/fonts/Rubik Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E3C1574346DA4B5EB1187F13 /* Rubik Light Italic.ttf */ = {isa = PBXFileReference; name = "Rubik Light Italic.ttf"; path = "../src/assets/fonts/Rubik Light Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5BA59143B58347459447C3C8 /* Rubik Light.ttf */ = {isa = PBXFileReference; name = "Rubik Light.ttf"; path = "../src/assets/fonts/Rubik Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		796A86A5F133415EB675D5F8 /* Rubik Medium Italic.ttf */ = {isa = PBXFileReference; name = "Rubik Medium Italic.ttf"; path = "../src/assets/fonts/Rubik Medium Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		38193A1187E34576B86E9738 /* Rubik Medium.ttf */ = {isa = PBXFileReference; name = "Rubik Medium.ttf"; path = "../src/assets/fonts/Rubik Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		025982A60F1749DBAAC09946 /* Rubik Regular.ttf */ = {isa = PBXFileReference; name = "Rubik Regular.ttf"; path = "../src/assets/fonts/Rubik Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EA1B67433AB840839DC615A8 /* SUBSCRIBERRegular.otf */ = {isa = PBXFileReference; name = "SUBSCRIBERRegular.otf"; path = "../src/assets/fonts/SUBSCRIBERRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +261,17 @@
 				1C85C0FEAAEF43EBB913EEFD /* Rubik Medium Italic.ttf */,
 				D64BAC72FA9D48A7BCBB684D /* Rubik Medium.ttf */,
 				81320D4D28674FF39CB38868 /* Rubik Regular.ttf */,
+				4518EDAAE5054AFD99412040 /* Rubik Black Italic.ttf */,
+				E7AA83C556834AB58571338D /* Rubik Black.ttf */,
+				7AB8BCD2D4554401B5815888 /* Rubik Bold Italic.ttf */,
+				72BDD28ABA4146B4828E2555 /* Rubik Bold.ttf */,
+				563E70FEE33242A49C602EA3 /* Rubik Italic.ttf */,
+				E3C1574346DA4B5EB1187F13 /* Rubik Light Italic.ttf */,
+				5BA59143B58347459447C3C8 /* Rubik Light.ttf */,
+				796A86A5F133415EB675D5F8 /* Rubik Medium Italic.ttf */,
+				38193A1187E34576B86E9738 /* Rubik Medium.ttf */,
+				025982A60F1749DBAAC09946 /* Rubik Regular.ttf */,
+				EA1B67433AB840839DC615A8 /* SUBSCRIBERRegular.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -408,6 +441,17 @@
 				13215348800746FD8A13D62B /* Rubik Medium Italic.ttf in Resources */,
 				8ED67DACD7044D5C9A0DDE2D /* Rubik Medium.ttf in Resources */,
 				BC87CB08B05E47FBACC78858 /* Rubik Regular.ttf in Resources */,
+				34CA0587F06B4AC383C1E0CE /* Rubik Black Italic.ttf in Resources */,
+				8848BFEC01B047B6A2DEB24B /* Rubik Black.ttf in Resources */,
+				E8D204B2BA5941CCA90C097C /* Rubik Bold Italic.ttf in Resources */,
+				71F4379379934FB380114858 /* Rubik Bold.ttf in Resources */,
+				F9F98FE8831249F4BBBDC8E3 /* Rubik Italic.ttf in Resources */,
+				A7935FE034CE40709B31509F /* Rubik Light Italic.ttf in Resources */,
+				DF3147AA269B4E8F9A3CC1D4 /* Rubik Light.ttf in Resources */,
+				1A13C2B9CEA74CF5AB63304C /* Rubik Medium Italic.ttf in Resources */,
+				4BDA9E305F774C0AAF254CC6 /* Rubik Medium.ttf in Resources */,
+				7CE63439AADB4ADAA0AA646D /* Rubik Regular.ttf in Resources */,
+				06A99915B6EE48DDA261C970 /* SUBSCRIBERRegular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

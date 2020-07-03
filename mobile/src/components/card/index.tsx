@@ -19,7 +19,7 @@ interface Props {
     name: string;
     type: string;
     assessments: number;
-    is_open: number;
+    is_open: boolean;
     image: string;
     brands: {
         name: string,
