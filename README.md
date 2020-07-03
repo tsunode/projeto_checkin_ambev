@@ -57,11 +57,10 @@ cd mobile
 ```
 
 #### Execute o comando para instalações de dependências do mobile:
+> Altere a baseURL em ./src/services/api.ts 
 ```
 npm install
 ```
-
-> Altere a baseURL em ./src/services/api.ts 
 
 #### Com o celular plugado no PC, utilize o comando:
 > É necessário ativar o modo de depuração do celular
