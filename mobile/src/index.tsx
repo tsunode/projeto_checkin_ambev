@@ -1,5 +1,8 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
+
+import store from './store';
 
 import colors from './styles/colors';
 
@@ -9,8 +12,10 @@ import Routes from './routes/routes';
 export default function App() {
   return (
     <>
-      <StatusBar backgroundColor={colors.primary} />
-      <Routes />
+      <Provider store={store}>
+        <StatusBar backgroundColor="#fff" barStyle="dark-content" />
+        <Routes />
+      </Provider>
     </>
   );
 };

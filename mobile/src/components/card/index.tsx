@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Image, Text, TouchableOpacity, LayoutAnimation, UIManager, Platform, Animated, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons'
 
 // logos
 import Trofeu from '../../assets/img/trofeus/premio_lider_comentarios.svg';
@@ -8,6 +9,7 @@ import StarActive from '../../assets/img/iconesPersonalizados/star_active.svg';
 import StarInative from '../../assets/img/iconesPersonalizados/star_inative.svg';
 import Comment from '../../assets/img/iconesPersonalizados/comment.svg';
 import Address from '../../assets/img/iconesPersonalizados/address.svg';
+import Security from '../../assets/img/iconesPersonalizados/security.svg';
 
 // estilos
 import styles from './styles';
@@ -87,10 +89,12 @@ const Card: React.FC<Props> = (props) => {
                 <View style={styles.main}>
                     <View>
                         <Image style={styles.barImage} source={{ uri: props.image }} />
+                        <Security style={styles.securityIcon} width={30} height={30} />
                     </View>
                     <View style={styles.viewText}>
                         <Text style={styles.barName} numberOfLines={1}>
                             {props.name}
+                            <IconMaterial name="microphone-variant" size={25} color="#6d6d6d" />
                         </Text>
                         <Text style={styles.barStatus}>
                             {props.is_open ? "Já estamos aberto" : "Abre às "}

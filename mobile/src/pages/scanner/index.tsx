@@ -15,12 +15,20 @@ import colors from '../../styles/colors';
 
 const Scanner: React.FC = () => {
 
-    const [score, setScore] = useState(15264);
+    const [score, setScore] = useState(0);
     const [pointsReceived, setPointsReceived] = useState(0);
     const [modalVisible, setModalVisible] = useState(false);
+    const [modalErrorVisible, setModalErrorVisible] = useState(false);
+    const [error, setError] = useState();
+
+    useEffect(() => {
+        api.get('users/1').then(response => {
+            setScore(response.data.points)
+        });
+    }, [score])
 
     async function handleScanner(code: String) {
-    
+
         await api.post('checkin', { id_user: 1, code }).then(response => {
             if (response.data.validado) {
 
@@ -43,13 +51,18 @@ const Scanner: React.FC = () => {
         }).catch((error) => {
             if (error.response.status == 403) {
 
-                setModalVisible(true);
+                setModalErrorVisible(true);
 
                 console.log(error.response.data.message);
+
+                setError(error.response.data.message);
             }
         });
 
-        setTimeout(() => setModalVisible(false), 5000);
+        setTimeout(() =>{
+            setModalVisible(false)
+            setModalErrorVisible(false)
+        }, 5000);
     }
 
     return (
@@ -62,6 +75,7 @@ const Scanner: React.FC = () => {
                 </View>
             </View>
             <Modal visible={modalVisible} points={pointsReceived} />
+            <Modal visible={modalErrorVisible} error={error} />
         </>
     )
 

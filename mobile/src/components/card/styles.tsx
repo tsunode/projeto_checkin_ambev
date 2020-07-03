@@ -36,8 +36,8 @@ const Styles = StyleSheet.create({
     },
 
     barName: {
-        fontSize: 25,
-        color: colors.primary,
+        fontSize: 20,
+        color: '#6d6d6d',
         fontFamily: 'Rubik Bold',
         // fontWeight:'bold',
     },
@@ -58,18 +58,18 @@ const Styles = StyleSheet.create({
     },
 
     star: {
-        margin: 2
+        marginRight: 2
     },
 
     viewText: {
         flexDirection: "column",
-        marginLeft: 5,
+        marginLeft: 7,
         flex: 3,
+        justifyContent: 'center'
     },
     footer: {
         flex: 1,
         flexDirection: 'row',
-        // justifyContent: 'center',
         marginTop: 20
     },
 
@@ -88,12 +88,15 @@ const Styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
-        borderLeftWidth: 3,
-        borderLeftColor: colors.primary,
+        // borderLeftWidth: 3,
+        // borderLeftColor: colors.primary,
     },
 
+    securityIcon:{
+        position: 'absolute',
+        bottom: -3
+    },
     viewInformationIcon: {
-
         alignItems: 'center',
         marginHorizontal: 5
     },
@@ -115,8 +118,8 @@ const Styles = StyleSheet.create({
     },
 
     beerImage: {
-        width: 70,
-        height: 70,
+        width: 50,
+        height: 50,
         marginHorizontal: 10
     }
 });

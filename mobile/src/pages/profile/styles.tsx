@@ -13,12 +13,13 @@ const Styles = StyleSheet.create({
     profile: {
         flexDirection: 'row',
         marginVertical: 10,
-        padding: 5
+        padding: 5,
     },
 
     profileImage: {
         width: 90,
         height: 90,
+        marginRight: 5
 
     },
 
@@ -114,35 +115,48 @@ const Styles = StyleSheet.create({
     viewMedalhas: {
         // flex: 1,
         padding: 10,
+        marginHorizontal: 0,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'
     },
 
-    scoreView:{
+    medal: {
+        marginHorizontal: 8
+    },
+
+    scoreView: {
         flexDirection: 'row',
         backgroundColor: colors.primary,
-        borderWidth: 5,
-        borderColor: colors.textPrimary,
-        borderRadius: 50,
-        padding: 10,
-        maxWidth: 250,
-        marginTop: 10
+        borderRadius: 5,
+        padding: 5,
+        paddingHorizontal: 20,
+        marginTop: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
-    scoreText:{
-        fontSize: 40,
+    scoreText: {
+        fontSize: 50,
         color: colors.textSecondary,
-        marginHorizontal: 5
-        // fontFamily: 'Rubik Bold'
+        marginHorizontal: 10,
+        fontFamily: 'SUBSCRIBERRegular'
     },
 
-    recompensaImage:{
+    iconPlus: {
+        position: 'absolute',
+        bottom: -5,
+        right: -5,
+        backgroundColor: '#fff',
+        borderRadius: 50,
+    },
+
+    recompensaImage: {
         maxWidth: 70,
         maxHeight: 70
     },
 
-    recompensaView:{
+    recompensaView: {
         borderWidth: 4,
         width: 110,
         height: 110,
@@ -153,15 +167,15 @@ const Styles = StyleSheet.create({
         margin: 5
     },
 
-    recompensaText:{
+    recompensaText: {
         color: colors.primary
     },
 
-    recompensaTextMore:{
+    recompensaTextMore: {
         color: colors.primary,
         textAlign: 'center',
         textAlignVertical: 'center',
-        flex:1,
+        flex: 1,
         fontSize: 30,
         fontWeight: 'bold'
     }

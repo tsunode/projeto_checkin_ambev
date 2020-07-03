@@ -12,14 +12,13 @@ const Styles = StyleSheet.create({
         backgroundColor: '#fff',
         margin: 0,
         paddingHorizontal: 20,
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-between'
     },
-
-    textInput:{
-        flex: 1,
-        fontSize: 18
+    nickname: {
+        fontSize: 18,
+        color: '#6D6D6D'
     }
-
 });
 
 export default Styles;
