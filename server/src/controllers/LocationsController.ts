@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import knex from "../database/connection"
+import ip from 'ip';
 
 class LocationController {
 
@@ -24,10 +25,10 @@ class LocationController {
 
             seralizedLocations.push({
                 ...location,
-                image: `http://192.168.0.107:3333/uploads/locations/${location.image}`,  
+                image: `http://${ip.address()}:3333/uploads/locations/${location.image}`,  
                 brands:[{ 
                     name: location.name_brand, 
-                    image: `http://192.168.0.107:3333/uploads/brands/${location.image_brand}`
+                    image: `http://${ip.address()}:3333/uploads/brands/${location.image_brand}`
                 }]
             });
             
@@ -40,7 +41,7 @@ class LocationController {
         }else{ // senão apenas adicionamos a marca dentro do bar atual
             seralizedLocations[locationIndex - 1].brands.push({ 
                 name: location.name_brand, 
-                image: `http://192.168.0.107:3333/uploads/brands/${location.image_brand}`
+                image: `http://${ip.address()}:3333/uploads/brands/${location.image_brand}`
             })
         }
     })

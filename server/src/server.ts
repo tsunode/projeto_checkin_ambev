@@ -3,7 +3,6 @@ import express from "express";
 import cors from "cors";
 import routes from "./routes";
 
-
 const port = 3333;
 
 // declarando uma constante para receber o express
