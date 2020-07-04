@@ -16,9 +16,6 @@ main{
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
