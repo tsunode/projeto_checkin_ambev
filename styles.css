@@ -24,13 +24,13 @@ main{
 
 @media (max-width: 480px) {
   .container {
-    width: 460px;
+    max-width: 460px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    width: 750px;
+    max-width: 750px;
   }
 
   section{
@@ -42,12 +42,12 @@ main{
 
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
-    width: 970;
+    max-width: 970;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    max-width: 1170px;
   }
 }
