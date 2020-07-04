@@ -45,7 +45,7 @@ const ModalCheckin: React.FC<Props> = (props) => {
         ModalView = (
             <View style={styles.modalView}>
                 <View style={styles.header}>
-                    <Icon name="check-circle" size={70} color={colors.primary} />
+                    <Icon name="exclamation-triangle" size={70} color={colors.primary} />
                     <Text style={styles.modalText}>Check-In</Text>
                     <Animated.View
                         style={{
@@ -63,7 +63,7 @@ const ModalCheckin: React.FC<Props> = (props) => {
                         }
                     ]}
                 >
-                    <Text style={[styles.points, { fontSize: 20 }]}>Você já fez Check-in hoje</Text>
+                    <Text style={[styles.points, { fontSize: 35 }]}>{props.error}</Text>
                 </Animated.View>
                 <View style={styles.message}>
                     <Text style={{ color: '#fff' }}>
@@ -94,7 +94,7 @@ const ModalCheckin: React.FC<Props> = (props) => {
                         }
                     ]}
                 >
-                    <Text style={styles.points}>+500</Text>
+                    <Text style={styles.points}>+{props.points}</Text>
                     <Tampinha width={60} height={60} />
                 </Animated.View>
                 <View style={styles.message}>

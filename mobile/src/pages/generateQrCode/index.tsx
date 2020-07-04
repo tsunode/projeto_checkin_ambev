@@ -15,7 +15,7 @@ const generateQrCode: React.FC = () => {
     const [code, setCode] = useState('0');
 
     useEffect(() => {
-        api.get('code').then(response => {
+        api.get('code/1').then(response => {
             console.log(response.data);
             setCode(response.data);
         });

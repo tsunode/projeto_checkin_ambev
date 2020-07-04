@@ -10,7 +10,7 @@ const routes = express.Router();
 
 routes.get("/locations", locationsController.index);
 
-routes.get("/code", locationsController.generateCode);
+routes.get("/code/:location_id", locationsController.generateCode);
 
 routes.post("/checkin", locationsController.checkin);
 

@@ -25,7 +25,7 @@ const Scanner: React.FC = () => {
         api.get('users/1').then(response => {
             setScore(response.data.points)
         });
-    }, [score])
+    }, [])
 
     async function handleScanner(code: String) {
 
