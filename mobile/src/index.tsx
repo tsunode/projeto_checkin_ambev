@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, SafeAreaView  } from 'react-native';
 import { Provider } from 'react-redux';
 
 import store from './store';
@@ -13,8 +13,10 @@ export default function App() {
   return (
     <>
       <Provider store={store}>
+        <SafeAreaView style={{ flex: 1 }} >
         <StatusBar backgroundColor="#fff" barStyle="dark-content" />
         <Routes />
+        </SafeAreaView>
       </Provider>
     </>
   );

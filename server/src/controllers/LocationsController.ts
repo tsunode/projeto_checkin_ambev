@@ -118,14 +118,20 @@ class LocationController {
     }
 
 
-    const [{ datetime }]: any = await knex("users_checkin")
+    const [ datetime ]: any = await knex("users_checkin")
       .select("users_checkin.datetime")
       .where("id_user", "=", id_user)
       .orderBy("id", "desc")
       .limit(1);
 
-    // retorna quantas horas foi feito o último checkin: 1 hora = 3600000 milessegundos
-    const tempoUltimoCheckin = (Date.now() - datetime) / 3600000;
+      console.log(datetime);
+
+      let tempoUltimoCheckin = 12;
+
+      if(datetime !== undefined){
+        // retorna quantas horas foi feito o último checkin: 1 hora = 3600000 milessegundos
+        tempoUltimoCheckin = (Date.now() - datetime.datetime) / 3600000;
+      }
 
     if (tempoUltimoCheckin >= 12) {
       // retorno até a letra 'L'

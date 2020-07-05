@@ -1,5 +1,6 @@
 import knex from "knex";
 import path from "path";
+import { Model } from 'objection'
 
 // __dirname retorna caminho que estamos
 const connection = knex({
@@ -9,5 +10,7 @@ const connection = knex({
   },
   useNullAsDefault: true,
 });
+
+Model.knex(connection);
 
 export default connection;

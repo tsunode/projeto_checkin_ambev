@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "ip": "^1.1.5",
     "knex": "^0.21.1",
+    "objection": "^2.2.0",
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.49",
     "typescript": "^3.9.5"
