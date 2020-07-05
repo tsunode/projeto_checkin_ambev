@@ -1,0 +1,16 @@
+import knex from "knex";
+import path from "path";
+import { Model } from 'objection'
+
+// __dirname retorna caminho que estamos
+const connection = knex({
+  client: "sqlite3",
+  connection: {
+    filename: path.resolve(__dirname, "database.sqlite"),
+  },
+  useNullAsDefault: true,
+});
+
+Model.knex(connection);
+
+export default connection;
